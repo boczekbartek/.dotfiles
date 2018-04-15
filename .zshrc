@@ -8,13 +8,20 @@ export ZSH=/Users/bartek/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
+
+zsh_host(){
+	hostname | cut -d "-" -f1
+}
+POWERLEVEL9K_CUSTOM_HOST="zsh_host"
+
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host virtualenv dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_host virtualenv dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 POWERLEVEL9K_STATUS_OK_BACKGROUND="clear"
 POWERLEVEL9K_STATUS_OK_FOREGROUND="green"
 POWERLEVEL9K_STATUS_ERROR_BACKGROUND="clear"
 POWERLEVEL9K_STATUS_ERROR_FOREGROUND="red"
+
 # zsh tmux settings
 
 ZSH_TMUX_AUTOSTART='true'
