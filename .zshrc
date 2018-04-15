@@ -9,7 +9,7 @@ export ZSH=/Users/bartek/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host virtualenv dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 POWERLEVEL9K_STATUS_OK_BACKGROUND="clear"
 POWERLEVEL9K_STATUS_OK_FOREGROUND="green"
