@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/bartek/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -23,8 +23,6 @@ POWERLEVEL9K_STATUS_ERROR_BACKGROUND="clear"
 POWERLEVEL9K_STATUS_ERROR_FOREGROUND="red"
 
 # zsh tmux settings
-
-ZSH_TMUX_AUTOSTART='true'
 
 
 # Set list of themes to load
