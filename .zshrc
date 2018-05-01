@@ -131,6 +131,10 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 alias del=trash
 
+# copy / paste
+alias c=pbcopy
+alias p=pbpaste
+
 # autojump utility
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
