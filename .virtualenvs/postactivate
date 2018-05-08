@@ -1,0 +1,6 @@
+#!/bin/zsh
+# This hook is sourced after every virtualenv is activated.
+
+proj_name=$(basename $VIRTUAL_ENV)
+cd ~/Devel/$proj_name
+export PYTHONPATH="${PYTHONPATH}:`pwd`"
