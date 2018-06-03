@@ -140,3 +140,25 @@ alias p=pbpaste
 
 alias vi="vim"
 alias mount_dell="sudo sshfs -o allow_other,defer_permissions bartek@dell:/home/bartek /mnt/dell/"
+
+
+run(){
+	# Activate application using AppleScript by name
+	#
+	# Name of application
+	app=$1
+
+	osascript -e "tell application \"$app\" to activate" 
+}
+
+export run
+
+# Aliases for most commonly used apps
+alias mail="run Mail"
+alias slack="run Slack"
+alias firefox="run Firefox"
+alias messenger="run Messenger"
+alias excel="run Excel"
+alias calendar="run Calendar"
+alias settings="run \"System Preferences\""
+alias pycharm="run PyCharm"
