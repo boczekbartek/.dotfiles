@@ -162,3 +162,4 @@ alias calendar="run Calendar"
 alias settings="run \"System Preferences\""
 alias pycharm="run PyCharm"
 alias diploma_repo="open -a Firefox 'https://github.com/boczekbartek/SpeakerRecognition'"
+source $HOME/.dotfiles/*.sh
