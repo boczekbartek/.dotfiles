@@ -7,25 +7,12 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
 
-zsh_host(){
-	hostname | cut -d "-" -f1
-}
-POWERLEVEL9K_CUSTOM_HOST="zsh_host"
-
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_host virtualenv dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
-POWERLEVEL9K_STATUS_OK_BACKGROUND="clear"
-POWERLEVEL9K_STATUS_OK_FOREGROUND="green"
-POWERLEVEL9K_STATUS_ERROR_BACKGROUND="clear"
-POWERLEVEL9K_STATUS_ERROR_FOREGROUND="red"
+# Theme config in $HOME/.dotfiles/powerlevel9k.conf.sh 
 
 # zsh tmux settings
 
 ZSH_TMUX_AUTOSTART='true'
-
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -124,42 +111,8 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="$EDITOR ~/.zshrc"
 alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
-
-alias del=trash
-
-# copy / paste
-alias c=pbcopy
-alias p=pbpaste
-
-# autojump utility
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
-alias vi="vim"
-alias mount_dell="sudo sshfs -o allow_other,defer_permissions bartek@dell:/home/bartek /mnt/dell/"
-
-
-run(){
-	# Activate application using AppleScript by name
-	#
-	# Name of application
-	app=$1
-
-	osascript -e "tell application \"$app\" to activate" 
-}
-
-export run
-
-# Aliases for most commonly used apps
-alias mail="run Mail"
-alias slack="run Slack"
-alias firefox="run Firefox"
-alias messenger="run Messenger"
-alias excel="run Excel"
-alias calendar="run Calendar"
-alias settings="run \"System Preferences\""
-alias pycharm="run PyCharm"
-alias diploma_repo="open -a Firefox 'https://github.com/boczekbartek/SpeakerRecognition'"
-source $HOME/.dotfiles/*.sh
+# configurations of tools are located in dedicated files in $HOME/.dotfiles directory
+for f in $HOME/.dotfiles/*.sh; do
+	echo "Sourcing ${f}";
+	source $f;
+done

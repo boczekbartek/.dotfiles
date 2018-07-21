@@ -1,0 +1,7 @@
+*
+*/
+!.dotfiles/
+!.zshrc
+!.tmux.conf
+!.vimrc
+!.gitignore
