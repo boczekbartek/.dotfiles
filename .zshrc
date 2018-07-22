@@ -113,6 +113,10 @@ alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 
 # configurations of tools are located in dedicated files in $HOME/.dotfiles directory
 for f in $HOME/.dotfiles/*.sh; do
-	echo "Sourcing ${f}";
+	source $f;
+done
+
+# do commands that are connected to current work
+for f in $HOME/.current/*; do
 	source $f;
 done
