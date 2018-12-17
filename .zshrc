@@ -111,6 +111,11 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="$EDITOR ~/.zshrc"
 alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 
+# Autojump
+[[ -s /Users/bartek/.autojump/etc/profile.d/autojump.sh ]] && source /Users/bartek/.autojump/etc/profile.d/autojump.sh
+
+autoload -U compinit && compinit -u
+
 # configurations of tools are located in dedicated files in $HOME/.dotfiles directory
 for f in $HOME/.dotfiles/*.sh; do
 	source $f;
