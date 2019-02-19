@@ -15,6 +15,11 @@ buw () {
   read
   clear;
 }
-export -f buw >/dev/null
+export -f buw > /dev/null
+function cs () {
+    cd $1
+    ls
+}
+export -f cs > /dev/null
 
 alias concat_pdfs="/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py"
