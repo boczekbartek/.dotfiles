@@ -13,6 +13,7 @@ source ~/.dotfiles/powerlevel9k.conf.sh
 # zsh tmux settings
 
 ZSH_TMUX_AUTOSTART='true'
+ZSH_TMUX_AUTOCONNECT='false'
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
