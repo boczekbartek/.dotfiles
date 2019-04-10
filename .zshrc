@@ -126,3 +126,5 @@ done
 for f in $HOME/.current/*; do
 	source $f;
 done
+
+export PATH=$PATH:/Users/bartek/Tools/hadoop-3.2.0/hadoop-3.2.0/bin
