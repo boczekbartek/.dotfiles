@@ -127,4 +127,4 @@ for f in $HOME/.current/*; do
 	source $f;
 done
 
-export PATH=$PATH:/Users/bartek/Tools/hadoop-3.2.0/hadoop-3.2.0/bin
+export PATH=$PATH:/Users/bartek/Tools/hadoop-3.2.0/hadoop-3.2.0/bin:/Users/bartek/Tools/spark-2.4.1-bin-hadoop2.7/bin
