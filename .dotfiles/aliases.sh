@@ -22,4 +22,5 @@ function cs () {
 }
 export -f cs > /dev/null
 
+export PATH="/Users/bartek/Tools/Compress4Kindle:$PATH"
 alias concat_pdfs="/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py"
