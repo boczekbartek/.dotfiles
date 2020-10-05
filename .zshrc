@@ -129,16 +129,17 @@ done
 
 export PATH=$PATH:/Users/bartek/Tools/hadoop-3.2.0/hadoop-3.2.0/bin:/Users/bartek/Tools/spark-2.4.1-bin-hadoop2.7/bin
 
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/bartek/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/bartek/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/bartek/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/bartek/opt/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/bartek/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/bartek/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/bartek/opt/anaconda3/bin:$PATH"
+        export PATH="/Users/bartek/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
